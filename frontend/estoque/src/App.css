@@ -1,0 +1,17 @@
+header {
+
+    height: 80px;
+    width: 100%;
+    background-color: #444444;
+    padding: 1rem;
+    color: #ccc;
+
+}
+
+header img {
+
+    width: 50px;
+    position: absolute;
+    top: 15px;
+    left: 95%;
+}
