@@ -13,7 +13,7 @@ const EditProducts = () => {
 
     const fetchProducts = async () => {
         try {
-            const response = await axios.get('http://localhost:3000/view-products');
+            const response = await axios.get('https://app-test2-d2068ae4b3f9.herokuapp.com/view-products');
             setProducts(response.data);
             console.log('Lista de produtos atualizada', response.data);
         } catch (error) {
@@ -23,7 +23,7 @@ const EditProducts = () => {
 
     const deleteProduct = async (productId) => {
         try {
-            const response = await axios.delete(`http://localhost:3000/view-products/${productId}`);
+            const response = await axios.delete(`https://app-test2-d2068ae4b3f9.herokuapp.com/view-products/${productId}`);
             await fetchProducts();
         } catch (error) {
             console.error('Ocorreu um erro ao excluir o produto', error);
@@ -32,7 +32,7 @@ const EditProducts = () => {
 
     const editProduct = async (productId) => {
         try {
-            const response = await axios.put(`http://localhost:3000/view-products/${productId}`, editedData);
+            const response = await axios.put(`https://app-test2-d2068ae4b3f9.herokuapp.com/view-products/${productId}`, editedData);
             console.log(response.data);
             await fetchProducts();
             setEditingProduct(null); 
