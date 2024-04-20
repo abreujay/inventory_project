@@ -30,7 +30,7 @@ const ProductsComponent = () => {
         setProductQuant('');
     
         try {
-            const response = await axios.post("http://localhost:3000/", {
+            const response = await axios.post("https://app-test2-d2068ae4b3f9.herokuapp.com/", {
                 productName,
                 productPrice,
                 productQuant
